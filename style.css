@@ -1,0 +1,185 @@
+/*==============FONTS==============*/
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(fonts/Poppins-Bold.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(fonts/Poppins-Regular.ttf) format(truetype);
+}
+
+*{
+	box-sizing: border-box;
+}
+/*==============BODY==============*/
+body{
+    background-color: #F3F2E8;
+    overflow-x: hidden;
+}
+
+/*=============="HEADER"==============*/
+header{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	z-index: 100000;
+	background-color: #F3F2E8;
+}
+
+header .logo{
+	padding-left: 90px;
+	position: relative;
+	text-decoration: none;
+    font-size: 16px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+	transition: 0.6s;
+}
+
+ul{
+    text-align: center;
+}
+
+ul li{
+    
+    display: inline-block;
+    line-height: 65px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+    padding: 0 50px;
+}
+
+/*=============="TITLES"==============*/
+
+h1{
+	padding-left: 145px;
+	padding-top: 200px;
+	text-decoration: none;
+	text-align: left;
+    font-size: 50px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+}
+
+h2{
+	padding-left: 145px;
+	padding-top: 90px;
+	
+	text-decoration: none;
+	text-align: left;
+    font-size: 35px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+}
+
+
+/* ======= Remove the border from the textarea ======= */
+textarea {
+    border: none;
+    outline: none; /* ======= Removes the outline when the textarea is focused ======= */
+    
+    /* ======= Adjust the width and height with CSS ======= */
+    width: 600px;
+    height: 400px;
+
+    resize: none;
+
+	text-decoration: none;
+	text-align: left;
+    font-size: 16px;
+    font-family: "Poppins-Regular";
+    color: #154960;
+
+	padding-left: 80px;
+}
+
+/* ======= BUTTONS ======= */
+button{
+	text-align: center;
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+
+	border-radius: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+
+	background-color: #F3F2E8;
+	border-width: 3px;
+	border-color: #154960;
+
+	margin-left: 20px;
+}
+
+button:hover{
+	color: #F3F2E8;
+	background-color: #154960;
+}
+
+option{
+	text-align: left;
+    font-size: 12px;
+    font-family: "Poppins-Regular";
+    color: #154960;
+	background-color: #F3F2E8;
+}
+
+select{
+	margin-left: 145px;
+	margin-bottom: 80px;
+	text-align: center;
+    font-size: 12px;
+    font-family: "Poppins-Bold";
+    color: #154960;
+
+	border-radius: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+
+	background-color: #F3F2E8;
+	border-width: 3px;
+	border-color: #154960;
+}
+
+select:hover {
+	color: #F3F2E8;
+	background-color: #154960;
+}
+
+.images{
+	width: 700px;
+	float: right;
+	padding-top: 50px;
+	padding-right: 100px;
+	
+}
+
+.images-t{
+	height: 400px;
+	float: right;
+	padding-right: 100px;
+	
+}
+
+footer{
+	text-decoration: none;
+	text-align: center;
+    font-size: 8px;
+    font-family: "Poppins-Regular";
+    color: #154960;
+}

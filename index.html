@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ADHD and Dyslexia Alternative Card</title>
+  <link rel="shortcut icon" type="image/png" href="img/accessibility.png">
+</head>
+
+<body>
+	<header>
+		<a href="#" class="logo">ADHD and Dyslexia Alternative Card</a>
+			<ul>
+		  		<li><a href="#who">Who</a></li>
+		  		<li><a href="#struggles">Struggles</a></li>
+		  		<li><a href="#abilities">Abilities</a></li>
+		  		<li><a href="#assistive-technology">Assistive Technologies</a></li>
+			</ul>
+	</header>
+	<section class="banner"></section>
+
+	<img class="images" src="img/Student stress-pana.png" alt="student struggling with reading">
+	<h1> Middle school student <br> with attention deficit <br> hyperactivity disorder <br> and dyslexia</h1>>
+		
+	<h2 id="who"> Who </h2>
+
+	<img class="images-t" src="img/Add User-pana.png" alt="user">
+	<textarea id="who-text" cols="45" rows="3" disabled>
+		- Preety
+		- Middle school student with attention deficit
+		hyperactivity disorder and dyslexia
+		- Enjoys her literature class
+	</textarea> 
+	
+	<br>
+	
+	<!-- ======= Voice Selector ======= -->
+	<select id="voiceselection"></select> 
+	 
+	<button onclick="responsiveVoice.speak($('#who-text').val(),$('#voiceselection').val());" 
+		type="button" value="Play">Play
+	</button> 
+
+	<button onclick="responsiveVoice.cancel();" 
+		type="button" value="Cancel">Stop
+	</button> 
+
+	<button onclick="responsiveVoice.pause();" 
+		type="button" value="Pause">Pause
+	</button>
+
+	<button onclick="responsiveVoice.resume();" 
+		type="button" value="Resume">Resume
+	</button> 
+	
+	<br>
+
+	<h2 id="struggles"> Struggles </h2>
+
+	<img class="images-t" src="img/Anxiety-pana.png" alt="user struggling">
+
+	<textarea id="struggles-text" cols="45" rows="3" disabled>
+		- Reading
+			- Struggle with words
+		- Websites with distracting advertisements
+		and moving content
+		- Navigation unclear
+		- Go to library to find books
+		- Spelling
+	</textarea> 
+	
+	<br>
+
+	<!-- ======= Voice Selector 2 ======= -->
+	<select id="voiceselection2"></select> 
+	 
+	<button onclick="responsiveVoice.speak($('#struggles-text').val(),$('#voiceselection2').val());" 
+		type="button" value="Play">Play
+	</button>
+	
+	<button onclick="responsiveVoice.cancel();" 
+		type="button" value="Cancel">Stop
+	</button> 
+
+	<button onclick="responsiveVoice.pause();" 
+		type="button" value="Pause">Pause
+	</button>
+
+	<button onclick="responsiveVoice.resume();" 
+		type="button" value="Resume">Resume
+	</button> 
+
+	<br>
+
+	<h2 id="abilities"> Abilities </h2>
+
+	<img class="images-t" src="img/Online learning-pana.png" alt="user focused">
+
+	<textarea id="abilities-text" cols="45" rows="3" disabled>
+		- Use online tools
+			- Text-to-speech
+			- Navegation cues
+		- Focus when using text-to-speech
+	</textarea> 
+	
+	<br>
+
+	<!-- ======= Voice Selector 3 ======= -->
+	<select id="voiceselection3"></select> 
+	 
+	<button onclick="responsiveVoice.speak($('#abilities-text').val(),$('#voiceselection2').val());" 
+		type="button" value="Play">Play
+	</button>
+
+	<button onclick="responsiveVoice.cancel();" 
+		type="button" value="Cancel">Stop
+	</button> 
+
+	<button onclick="responsiveVoice.pause();" 
+		type="button" value="Pause">Pause
+	</button>
+
+	<button onclick="responsiveVoice.resume();" 
+		type="button" value="Resume">Resume
+	</button> 
+
+	<br>
+
+	<h2 id="assistive-technology"> Assistive Technologies </h2>
+
+	<img class="images-t" src="img/Audiobook-pana.png" alt="assistive technology">
+
+	<textarea id="assistive-text" cols="45" rows="3" disabled>
+		- text-to-speech software
+			- highlights the text on the screen
+			- reads it aloud
+		- navigation cues
+			- navigation bar
+			- search box
+			- bread-crumb trails
+			- sitemap
+		- accessible library catalog online
+			- phone, tablet, laptop
+			- search feature that suggests alternative spellings
+			and correct words
+	</textarea> 
+	
+	<br>
+
+	<!-- ======= Voice Selector 4 ======= -->
+	<select id="voiceselection4"></select> 
+	 
+	<button onclick="responsiveVoice.speak($('#assistive-text').val(),$('#voiceselection4').val());" 
+		type="button" value="Play">Play
+	</button>
+
+	<button onclick="responsiveVoice.cancel();" 
+		type="button" value="Cancel">Stop
+	</button>
+	
+	<button onclick="responsiveVoice.pause();" 
+		type="button" value="Pause">Pause
+	</button>
+
+	<button onclick="responsiveVoice.resume();" 
+		type="button" value="Resume">Resume
+	</button> 
+
+	<footer>
+		Illustrations by https://storyset.com and website by Inês Azevedo (2023)
+	</footer>
+</body>
+
+<!-- ======= API ======= -->
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=6AqfGK6s"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+<script>
+        //======= Populate voice selection dropdown =======
+        var voicelist = responsiveVoice.getVoices();
+        var vselect = $("#voiceselection");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+		var vselect = $("#voiceselection2");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+		var vselect = $("#voiceselection3");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+		var vselect = $("#voiceselection4");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+
+
+        window.onload = function () {
+	        window.addEventListener('scroll', function (e) {
+		        if (window.pageYOffset > 100) {
+			    document.querySelector("header").classList.add('is-scrolling');
+		        } else {
+			        document.querySelector("header").classList.remove('is-scrolling');
+		            }
+	    });
+}
+</script>
